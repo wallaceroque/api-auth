@@ -1,0 +1,16 @@
+[
+    {
+        "cpf": "09446121728",
+        "nit": "07149441",
+        "nome": "Wallace Figueiredo",
+        "senha": "123456",
+        "statusToken": "SENHA_ALTERADA"
+    },
+    {
+        "cpf": "86225529349",
+        "nit": "90909090",
+        "nome": "Irleide Moraes",
+        "senha": "123456",
+        "statusToken": "VALIDADO"
+    }
+]
