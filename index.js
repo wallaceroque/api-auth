@@ -20,7 +20,7 @@ router.post('/auth', function (req, res) {
     var user = undefined;
 
     if (req.body) {
-        user = _.find(data, { 'cpf': req.body.cpf, 'senha': req.body.senha });
+        user = _.find(users, { 'cpf': req.body.cpf, 'senha': req.body.senha });
     }
 
     if (user) {
@@ -28,6 +28,26 @@ router.post('/auth', function (req, res) {
     } else {
         res.status(404).json({ "mensagem": "Usuário não encontrado!" });
     }
+
+});
+
+router.post('/upd', function (req, res) {
+    var index = undefined;
+
+    if (req.body) {
+        index = _.findIndex(users, { 'cpf': req.body.cpf, 'senha': req.body.senha });
+    }
+
+    console.log('Index: ' + index);
+
+    if (index > -1) {
+        users[index].senha = req.body.novaSenha;
+        users[index].statusToken = "SENHA_ALTERADA";
+        res.json(users[index]);
+    } else {
+        res.status(404).json({ "mensagem": "Usuário não encontrado!" });
+    }
+
 
 });
 
