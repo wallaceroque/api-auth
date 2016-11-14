@@ -24,6 +24,7 @@ router.post('/auth', function (req, res) {
     }
 
     if (user) {
+        console.log(user);
         res.json(user);
     } else {
         res.status(404).json({ "mensagem": "Usuário não encontrado!" });
@@ -38,11 +39,10 @@ router.post('/upd', function (req, res) {
         index = _.findIndex(users, { 'cpf': req.body.cpf, 'senha': req.body.senha });
     }
 
-    console.log('Index: ' + index);
-
     if (index > -1) {
         users[index].senha = req.body.novaSenha;
         users[index].statusToken = "SENHA_ALTERADA";
+        console.log(users[index]);
         res.json(users[index]);
     } else {
         res.status(404).json({ "mensagem": "Usuário não encontrado!" });

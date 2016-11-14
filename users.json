@@ -1,16 +1,24 @@
 [
     {
-        "cpf": "07329101748",
+        "cpf": "01234567890",
         "nit": "07149441",
         "nome": "Reparil",
-        "senha": "123456",
+        "nomeMaeIgnorado" : false,
+        "ufIgnorado" : false,
+        "senhaExpirada" : false,
+        "usuarioExpirado" : false,
+        "senha": "MTIzNDU2",
         "statusToken": "SENHA_ALTERADA"
     },
     {
-        "cpf": "34567334367",
+        "cpf": "09876543210",
         "nit": "90909090",
         "nome": "Dipirona",
-        "senha": "123456",
+        "nomeMaeIgnorado" : false,
+        "ufIgnorado" : false,
+        "senhaExpirada" : false,
+        "usuarioExpirado" : false,
+        "senha": "MTIzNDU2",
         "statusToken": "VALIDADO"
     }
 ]
