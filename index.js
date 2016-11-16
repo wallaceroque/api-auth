@@ -40,10 +40,15 @@ router.post('/upd', function (req, res) {
     }
 
     if (index > -1) {
-        users[index].senha = req.body.novaSenha;
-        users[index].statusToken = "SENHA_ALTERADA";
-        console.log(users[index]);
-        res.json(users[index]);
+        if (req.body.novaSenha.length >= 6) {
+            users[index].senha = req.body.novaSenha;
+            users[index].statusToken = "SENHA_ALTERADA";
+            users[index].senhaExpirada = false;
+            console.log(users[index]);
+            res.json(users[index]);
+        } else {
+	    res.status(400).json({ "mensagem": "Não foi possível alterar a senha. A nova senha não atende aos critérios de segurança." });
+	}
     } else {
         res.status(404).json({ "mensagem": "Usuário não encontrado!" });
     }

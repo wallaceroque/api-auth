@@ -20,5 +20,17 @@
         "usuarioExpirado" : false,
         "senha": "MTIzNDU2",
         "statusToken": "VALIDADO"
+    },
+    {
+        "cpf": "01472583690",
+        "nit": "91919191",
+        "nome": "Eparema",
+        "nomeMaeIgnorado" : false,
+        "ufIgnorado" : false,
+        "senhaExpirada" : true,
+        "usuarioExpirado" : false,
+        "senha": "MTIzNDU2",
+        "statusToken": "SENHA_ALTERADA"
     }
+
 ]
